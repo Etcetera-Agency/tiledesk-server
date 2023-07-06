@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 node:10.15.1
+FROM --platform=linux/amd64/v8 node:10.15.1
 
 RUN sed -i 's/stable\/updates/stable-security\/updates/' /etc/apt/sources.list
 
