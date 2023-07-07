@@ -1,4 +1,4 @@
-FROM node
+FROM node:18.16.1
 
 RUN sed -i 's/stable\/updates/stable-security\/updates/' /etc/apt/sources.list
 
