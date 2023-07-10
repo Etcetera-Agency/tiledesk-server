@@ -1,4 +1,4 @@
-FROM --platform=linux/arm64/v8 node:17
+FROM --platform=linux/arm64/v8 node:16
 
 RUN sed -i 's/stable\/updates/stable-security\/updates/' /etc/apt/sources.list
 
@@ -21,7 +21,7 @@ RUN if [ "$NPM_TOKEN" ]; \
 # where available (npm@5+)
 COPY package*.json ./
 
-RUN npm install --production
+RUN npm install --production --build-from-source
 
 RUN rm -f .npmrc
 
