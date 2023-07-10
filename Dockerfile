@@ -1,8 +1,8 @@
 FROM --platform=linux/arm64/v8 node:17
 
-RUN sed -i 's/stable\/updates/stable-security\/updates/' /etc/apt/sources.list
+RUN sed -i 's/stable\/updates/stable-security\/updates/' /etc/apk/repositories
 
-RUN apk update && apk add --no-cache build-base
+RUN apk update && apk add --no-cache alpine-sdk
 
 RUN apt-get update
 
