@@ -1,8 +1,6 @@
 FROM --platform=linux/arm64/v8 node:17
 
-RUN sed -i 's/stable\/main/stable-community\/testing/' /etc/apk/
-
-RUN apk update && apk add --no-cache build-base
+RUN sed -i 's/stable\/updates/stable-security\/updates/' /etc/apt/sources.list
 
 RUN apt-get update
 
